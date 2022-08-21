@@ -2,14 +2,20 @@
 
 $name = $_GET["name"];
 $age = $_GET["age"];
- 
-if ($name = "NULL" || $age= "NULL") {
-    echo "No hay datos para la solicitud";
+$namePost = $_POST["namePost"];
+$agePost = $_POST["agePost"];
+
+if ($name == "" || $age== "") {
+    echo "No hay datos para la solicitud GET. <br>";
+    
 }
 else {
-    echo "Al parecer eres $name y tienes $age años, puedes acceder a pagar impuestos."; 
+    echo "Al parecer eres $name y tienes $age años, puedes acceder a pagar impuestos. <br>"; 
 }
 
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
+if ($namePost == "" || $agePost== "") {
+    echo "No hay datos para la solicitud POST";
+}
+else {
+    echo "Al parecer eres $namePost y tienes $agePost años, puedes acceder a pagar impuestos."; 
+}

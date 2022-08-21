@@ -7,7 +7,8 @@
     <title>Method POST and GET</title>
 </head>
 <body>
-    <h1>Method GET</h1>
+        <h1>Method GET</h1>
+    
     <form action="./server.php" method="get">
 
         <label for="name">Enter your fullname</label>
@@ -16,22 +17,23 @@
         <label for="age">Enter your age</label>
         <input type="text" name="age" id="age">
 
-        <button type="submit">Submit Form</button>
+        <input type="submit" value= "Send form">
+        
     </form>
 
-    <h1>Method POST</h1>
+        <h1>Method POST</h1>
+
     <form action="./server.php" method="post">
 
-    <label for="name">Enter your fullname</label>
-        <input type="text" name="name" id="name">
+        <label for="namePost">Enter your fullname</label>
+        <input type="text" name="namePost" id="namePost">
 
-        <label for="age">Enter your age</label>
-        <input type="text" name="age" id="age">
+        <label for="agePost">Enter your age</label>
+        <input type="text" name="agePost" id="agePost">
 
-        <button type="submit">Submit Form</button>
+        <input type="submit" value= "Send form">
 
     </form>
-
 
 </body>
 </html>
