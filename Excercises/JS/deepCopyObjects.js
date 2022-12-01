@@ -38,7 +38,8 @@ function deepCopy(subject) {
   }
   
 const studentTemplate = {
-    name: undefined,
+    firstname: undefined,
+    lastname: undefined,
     email: undefined,
     age: undefined,
     approvedCourses: undefined,
@@ -50,3 +51,9 @@ const studentTemplate = {
         twitter: undefined,
     },
 };
+
+const exampleStudent = deepCopy(studentTemplate)
+Object.defineProperty(exampleStudent, "firstname", {
+    value: "Katerine Lopez",
+    configurable: false,
+})
