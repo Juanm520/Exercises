@@ -4,3 +4,4 @@ for (item in obj)
      deepFreeze(Object.freeze(obj[item]))   
  return Object.freeze(obj)
 }
+

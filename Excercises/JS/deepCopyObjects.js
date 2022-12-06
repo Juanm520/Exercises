@@ -6,7 +6,7 @@ function isArray(subject) {
     return Array.isArray(subject);
   }
   
-function deepCopy(subject) {
+export function deepCopy(subject) {
     let copySubject;
   
     const subjectIsObject = isObject(subject);
@@ -36,29 +36,4 @@ function deepCopy(subject) {
   
     return copySubject;
   }
-  
-const studentTemplate = {
-    firstname: undefined,
-    lastname: undefined,
-    email: undefined,
-    age: undefined,
-    approvedCourses: undefined,
-    learningPaths: undefined,
-    socialMedia: {
-        facebook: undefined,
-        instagram: undefined,
-        linkedin: undefined,
-        twitter: undefined,
-    },
-};
 
-const exampleStudent = deepCopy(studentTemplate)
-Object.defineProperty(exampleStudent, "firstname", {
-    value: "Katerine Lopez",
-    configurable: false,
-})
-
-Object.seal(exampleStudent)
-console.log(delete exampleStudent.firstname)
-console.log(exampleStudent.firstname)
-console.log(Object.isSealed(exampleStudent))
