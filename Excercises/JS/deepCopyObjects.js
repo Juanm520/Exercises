@@ -57,3 +57,8 @@ Object.defineProperty(exampleStudent, "firstname", {
     value: "Katerine Lopez",
     configurable: false,
 })
+
+Object.seal(exampleStudent)
+console.log(delete exampleStudent.firstname)
+console.log(exampleStudent.firstname)
+console.log(Object.isSealed(exampleStudent))
